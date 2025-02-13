@@ -5,12 +5,12 @@ import running
 with open('params.json') as f:
    params = json.load(f)
 
-id = params["parameters"]["id"]
-accessToken = params["parameters"]["accesstoken"]
+ID = params["parameters"]["id"]
+AccessToken = params["parameters"]["accesstoken"]
 
-URL = f'https://www.strava.com/api/v3/athletes/{id}/stats'
+URL = f'https://www.strava.com/api/v3/athletes/{ID}/stats'
 
-PARAMS = {'access_token':accessToken}
+PARAMS = {'access_token':AccessToken}
 
 r = requests.get(url = URL, params = PARAMS)
 
