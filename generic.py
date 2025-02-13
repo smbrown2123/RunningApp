@@ -17,6 +17,6 @@ def nearest_whole_km(Distance: float):
     return DistacneNearest
 
 def convert_to_km(Distance: float):
-    Distance = round(Distance/1000, 2)
+    Distance = Distance/1000
     
     return Distance

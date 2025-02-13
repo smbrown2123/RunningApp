@@ -2,10 +2,7 @@ import calls
 import math
 import generic
 import json
-
-with open('json.json') as f:
-   params = json.load(f)
-
+from datetime import datetime
 
 def get_total_distance(ID: int, AccessToken: str):
     data = calls.get_stats(ID, AccessToken)
@@ -29,8 +26,11 @@ def get_runs(ID: int, AccessToken: str):
         Activities = calls.get_activities(AccessToken, i)
         for activity in Activities:
             if activity['type'] == 'Run':
-                Date = activity['start_date_local']
+                DateTime = datetime.strptime(activity['start_date_local'], "%Y-%m-%dT%H:%M:%SZ")
+                Date = DateTime.strftime("%d-%m-%Y")
                 Distance = generic.convert_to_km(activity['distance'])
-                runs.append({'Distance': Distance,'Date': Date})
+                Time = activity['moving_time']/60
+                Pace = (Time) / Distance
+                runs.append({'Distance (km)': Distance,'Date': Date, 'Time (m)': Time, 'Pace (m/km)': Pace})
     
     return runs
