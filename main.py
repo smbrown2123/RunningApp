@@ -7,6 +7,6 @@ with open('params.json') as f:
 ID = params["parameters"]["id"]
 AccessToken = params["parameters"]["accesstoken"]
 
-distance = running.get_total_distance(ID, AccessToken)
-
-print(f'{distance} km')
+runs = running.get_runs(ID, AccessToken)
+for i in runs:
+    print(i)
