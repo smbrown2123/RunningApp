@@ -11,7 +11,7 @@ def get_total_distance(ID: int, AccessToken: str):
     data = calls.get_stats(ID, AccessToken)
 
     RunDistance = data['all_run_totals']['distance'] 
-    distance = nearest_whole_km(RunDistance)
+    distance = generic.nearest_whole_km(RunDistance)
     
     return distance
 
@@ -30,18 +30,7 @@ def get_runs(ID: int, AccessToken: str):
         for activity in Activities:
             if activity['type'] == 'Run':
                 Date = activity['start_date_local']
-                Distance = convert_to_km(activity['distance'])
+                Distance = generic.convert_to_km(activity['distance'])
                 runs.append({'Distance': Distance,'Date': Date})
     
     return runs
-    
-def nearest_whole_km(Distance: float):
-    RunDistanceInt = int(Distance)
-    RunDistacneNearest = round(RunDistanceInt / 1000)
-    
-    return RunDistacneNearest
-
-def convert_to_km(Distance: float):
-    RunDistance = round(Distance/1000, 2)
-    
-    return RunDistance
