@@ -1,8 +1,9 @@
 import calls
 import math
 import generic
-import json
 from datetime import datetime
+import matplotlib.pyplot as plt
+
 
 def get_total_distance(ID: int, AccessToken: str):
     data = calls.get_stats(ID, AccessToken)
@@ -31,6 +32,17 @@ def get_runs(ID: int, AccessToken: str):
                 Distance = generic.convert_to_km(activity['distance'])
                 Time = activity['moving_time']/60
                 Pace = (Time) / Distance
-                runs.append({'Distance (km)': Distance,'Date': Date, 'Time (m)': Time, 'Pace (m/km)': Pace})
+                runs.append({'distance': Distance,'date': Date, 'time': Time, 'pace': Pace})
     
     return runs
+
+def display_all_runs(DataFrame):
+    norm = plt.Normalize(DataFrame['pace'].min(), DataFrame['pace'].max())
+    colours = plt.cm.RdYlGn_r(norm(DataFrame['pace']))
+
+    Chart = DataFrame.plot.bar("date", "distance", color = colours, legend = False, title = 'All Runs Over Time')
+    Chart.set_ylabel('Distance (km)')
+    Chart.set_xlabel('Run')
+    Chart.set_xticklabels('')
+
+    plt.show()

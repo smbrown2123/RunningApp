@@ -1,4 +1,5 @@
 import calls
+import numpy as np
 
 def get_numner_of_activities(ID: int, AccessToken: str):
     data = calls.get_stats(ID, AccessToken)
