@@ -1,5 +1,6 @@
+# non running specific functions relating to the api
+
 import calls
-import numpy as np
 import json
 
 def get_numner_of_activities():
@@ -11,17 +12,6 @@ def get_numner_of_activities():
     activities = runs + cycles + swims
     
     return activities
-
-def nearest_whole_km(Distance: float):
-    DistanceInt = int(Distance)
-    DistacneNearest = round(DistanceInt / 1000)
-    
-    return DistacneNearest
-
-def convert_to_km(Distance: float):
-    Distance = Distance/1000
-    
-    return Distance
 
 def get_api_parameters():
     with open('params.json') as f:

@@ -1,3 +1,5 @@
+# functions which send the requests to the api
+
 import requests
 import json
 import generic

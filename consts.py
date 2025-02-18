@@ -1,0 +1,6 @@
+#Running Distances
+
+FIVE_K = 5.00
+TEN_K = 10.00
+HALF_MARATHON = 21.10
+MARATHON = 42.20
