@@ -2,11 +2,11 @@
 
 import requests
 import json
-import generic
+from generic import *
 
 def get_stats():
     renew_access()
-    params = generic.get_api_parameters()
+    params = get_api_parameters()
     ID = params[0]
     AccessToken = params[4]
     URL = f'https://www.strava.com/api/v3/athletes/{ID}/stats'
@@ -20,7 +20,7 @@ def get_stats():
 
 def get_activities(Page: int, PerPage = 200):
     renew_access()
-    params = generic.get_api_parameters()
+    params = get_api_parameters()
     AccessToken = params[4]
     URL = 'https://www.strava.com/api/v3/athlete/activities'
     PARAMS = {'access_token':AccessToken, 'per_page':PerPage, 'page':Page}
@@ -32,7 +32,7 @@ def get_activities(Page: int, PerPage = 200):
     return data
 
 def renew_access(grantType = 'refresh_token'):
-    params = generic.get_api_parameters()
+    params = get_api_parameters()
     ClientID = params[1]
     ClientSecret = params[2]
     RefreshToken = params[3]

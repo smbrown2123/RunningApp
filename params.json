@@ -1,7 +1,7 @@
 {
     "parameters": {
         "id": "",
-        "accesstoken": "",
+        "access_token": "",
         "client_id": "",
         "client_secret": "",
         "refresh_token": ""
