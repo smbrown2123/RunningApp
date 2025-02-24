@@ -1,6 +1,7 @@
 # functions for getting running data from the api
 import math
 from datetime import datetime
+import csv
 
 import calls
 from generic import *
@@ -36,3 +37,10 @@ def get_runs():
                 runs.append({'distance': Distance,'date': Date, 'time': Time, 'pace': Pace})
     
     return runs
+
+def save_runs_to_csv(runs: list):
+    with open('output.csv', 'w', newline='') as csvfile:
+        fieldnames = ['distance', 'date', 'time', 'pace']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(runs) 
