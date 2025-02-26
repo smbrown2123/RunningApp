@@ -2,7 +2,7 @@
 
 import requests
 import json
-from generic import *
+from API.generic import *
 
 def get_stats():
     renew_access()

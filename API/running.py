@@ -3,8 +3,8 @@ import math
 from datetime import datetime
 import csv
 
-import calls
-from generic import *
+import API.calls as calls
+from API.generic import *
 from formats import *
 
 def get_total_distance():

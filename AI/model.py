@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from net import *
 
 # import data and drop data column
-data = pd.read_csv('training.csv')
+data = pd.read_csv('AI/training.csv')
 data = data.drop(columns=['date'])
 
 # Normalize the numerical features

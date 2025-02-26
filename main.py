@@ -1,8 +1,7 @@
-import csv
 import pandas as pd
 
-from running import *
-from charts import *
+from API.running import *
+from Visuals.charts import *
 
 #Uncomment below to use API (requires params to be filled in)
 ''' 
