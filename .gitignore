@@ -1,2 +1,24 @@
 output.json
 
+__pycache__/calls.cpython-310.pyc
+.gitignore
+.gitignore
+__pycache__/charts.cpython-310.pyc
+.gitignore
+__pycache__/consts.cpython-310.pyc
+__pycache__/formats.cpython-310.pyc
+__pycache__/generic.cpython-310.pyc
+__pycache__/net.cpython-310.pyc
+__pycache__/run.cpython-310.pyc
+.gitignore
+__pycache__/rundataset.cpython-310.pyc
+.gitignore
+__pycache__/running.cpython-310.pyc
+.gitignore
+AI/__pycache__/net.cpython-310.pyc
+.gitignore
+API/__pycache__/calls.cpython-310.pyc
+API/__pycache__/generic.cpython-310.pyc
+.gitignore
+Visuals/__pycache__/charts.cpython-310.pyc
+API/__pycache__/running.cpython-310.pyc
