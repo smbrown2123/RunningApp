@@ -22,3 +22,4 @@ API/__pycache__/generic.cpython-310.pyc
 .gitignore
 Visuals/__pycache__/charts.cpython-310.pyc
 API/__pycache__/running.cpython-310.pyc
+db/__pycache__/dblogic.cpython-310.pyc

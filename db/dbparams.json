@@ -1,0 +1,9 @@
+{
+    "parameters": {
+        "dbname": "",
+        "user": "",
+        "host": "",
+        "password": "",
+        "port": ""
+    }
+}
