@@ -1,6 +1,6 @@
 {
     "parameters": {
-        "id": "",
+        "dbname": "",
         "user": "",
         "host": "",
         "password": "",
