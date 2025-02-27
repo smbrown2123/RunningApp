@@ -39,7 +39,7 @@ def write_runs_to_db(runs: list):
                 conn.commit()
                 
 def get_db_parameters():
-    with open('dbparams.json') as f:
+    with open('db/dbparams.json') as f:
         params = json.load(f)
 
     dbname = params["parameters"]["dbname"]
