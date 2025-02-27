@@ -1,0 +1,9 @@
+{
+    "parameters": {
+        "id": "",
+        "user": "",
+        "host": "",
+        "password": "",
+        "port": ""
+    }
+}
