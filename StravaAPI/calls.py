@@ -2,7 +2,7 @@
 
 import requests
 import json
-from API.generic import *
+from StravaAPI.generic import *
 
 def get_stats():
     renew_access()

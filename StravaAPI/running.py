@@ -3,8 +3,8 @@ import math
 from datetime import datetime
 import csv
 
-import API.calls as calls
-from API.generic import *
+import StravaAPI.calls as calls
+from StravaAPI.generic import *
 from formats import *
 
 def get_total_distance():
