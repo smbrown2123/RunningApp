@@ -23,3 +23,15 @@ API/__pycache__/generic.cpython-310.pyc
 Visuals/__pycache__/charts.cpython-310.pyc
 API/__pycache__/running.cpython-310.pyc
 db/__pycache__/dblogic.cpython-310.pyc
+localParams.txt
+.DS_Store
+StravaAPI/__pycache__/calls.cpython-310.pyc
+.gitignore
+StravaAPI/__pycache__/running.cpython-310.pyc
+.gitignore
+db/__pycache__/__init__.cpython-310.pyc
+.gitignore
+db/__pycache__/api.cpython-310.pyc
+.gitignore
+StravaAPI/__pycache__/generic.cpython-310.pyc
+StravaAPI/__pycache__/__init__.cpython-310.pyc
