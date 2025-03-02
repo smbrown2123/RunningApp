@@ -1,1 +1,1 @@
-Parameters for the params.json file can be aquired by following instructions provided by Strava [here](https://developers.strava.com/docs/getting-started/)
+Parameters for the params.json file can be aquired by following instructions provided by Strava [here](https://developers.strava.com/docs/getting-started/). Parameters for the dbparams.json file must represent the postgres server where the database is hosted.

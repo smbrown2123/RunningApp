@@ -35,3 +35,4 @@ db/__pycache__/api.cpython-310.pyc
 .gitignore
 StravaAPI/__pycache__/generic.cpython-310.pyc
 StravaAPI/__pycache__/__init__.cpython-310.pyc
+Visuals/__pycache__/__init__.cpython-310.pyc
