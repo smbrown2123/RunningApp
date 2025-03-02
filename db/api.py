@@ -23,8 +23,8 @@ def refresh_data_from_strava():
     runsDb = count_runs_in_db()
     runs = get_new_runs(runsDb)
     write_runs_to_db(runs)
-    print(runs)
-    return runs #"Db data refreshed"
+    
+    return f"Db data refreshed with {len(runs)} new runs."
 
 @app.get("/runs/hard-refresh")
 def refresh_all_runs_from_strava():
@@ -32,4 +32,4 @@ def refresh_all_runs_from_strava():
     runs = get_runs()
     write_runs_to_db(runs)
     
-    return runs#"Database Hard Refreshed"
+    return f"Database hard refreshed with {len(runs)} runs."
