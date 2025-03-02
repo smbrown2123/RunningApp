@@ -38,6 +38,18 @@ def get_runs():
     
     return runs
 
+def get_new_runs(runsDb: int): #takes the amount of runs currently stored as argument 
+    newRuns = []
+    runs = get_runs()
+    TotalRuns = len(runs) 
+    NumNewRuns = TotalRuns - runsDb
+    print(NumNewRuns)
+    for i in range(0, NumNewRuns ):
+        newRuns.append(runs[i])
+    return newRuns
+    
+
+
 def save_runs_to_csv(runs: list):
     with open('output.csv', 'w', newline='') as csvfile:
         fieldnames = ['distance', 'date', 'time', 'pace']

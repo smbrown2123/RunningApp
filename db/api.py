@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import psycopg
 
 from db.dblogic import *
-from StravaAPI.running import get_runs
+from StravaAPI.running import *
 
 app = FastAPI()
 
@@ -20,7 +20,16 @@ def get_run_by_id(run_id):
 
 @app.get("/runs/refresh")
 def refresh_data_from_strava():
+    runsDb = count_runs_in_db()
+    runs = get_new_runs(runsDb)
+    write_runs_to_db(runs)
+    
+    return f"Db data refreshed with {len(runs)} new runs."
+
+@app.get("/runs/hard-refresh")
+def refresh_all_runs_from_strava():
+    clear_runs()
     runs = get_runs()
     write_runs_to_db(runs)
     
-    return "Db data refreshed"
+    return f"Database hard refreshed with {len(runs)} runs."
